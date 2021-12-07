@@ -1,0 +1,57 @@
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+* {
+  background-color: black;
+}
+
+#title {
+  position: relative;
+  width: 1000px;
+  height: 75px;
+  margin-left: 50px;
+  margin-top: 10px;
+  border: 5px solid #f09c9c;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 65px;
+  font-family: "Titillium Web", sans-serif;
+  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(#f1b6d3 15%, #ffffff 65%, #02b2e7 80%);
+  -webkit-background-clip: text;
+}
+
+.gamebox {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+#game-canvas {
+  margin-left: 50px;
+  margin-top: 10px;
+  position: relative;
+  border: 5px solid #f09c9c;
+  border-radius: 20px;
+}
+
+.button-list {
+  text-align: justify;
+}
+
+.buttons {
+  color: black;
+  background-color: salmon;
+}
+
+h3 {
+  padding: 5px;
+  width: 1000px;
+  height: 50px;
+  margin-left: 100px;
+  color: white;
+  border: 3px solid white;
+  margin: 50px;
+  color: #f09c9c;
+  border-radius: 15px;
+}
