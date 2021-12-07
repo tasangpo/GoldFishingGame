@@ -19,7 +19,7 @@ In addition, this project will include:
 
 # Wireframe:
 
-![alt text](https://github.com/tasangpo/GoldFishing/blob/main/wireframe.png)
+![alt text](https://github.com/tasangpo/GoldFishingGame/blob/main/wireframe%2010.32.54%20AM.png)
 
 # Technology:
 - HTML
