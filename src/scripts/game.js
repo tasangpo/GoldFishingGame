@@ -64,6 +64,7 @@ class Game {
     }
 
     draw(ctx) {
+        //
         this.updateStats();
         const skyImg = new Image();
         const oceanImg = new Image();
