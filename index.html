@@ -5,31 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="keymaster.js"></script>
     <script src="./dist/main.js"></script>
     <title> Gold Fishing Game  </title>
 </head>
 <body>
+    <h1 id="title"> ⚓ GOLD FISHING GAME ⚓ </h1>
+    <div id="intro">
+        <p> Welcome to the Gold Fishing Game! Instructions are very simple, use you "A" key to move your player left and "D"
+            key to move your player right. When you think the time is right, enter your "space" key to drop your
+            line to pick up the gold. Be careful though, if the shark touches your line or by some stroke of astronomical
+            bad luck, you hit the shark on the head, it will climb up and eat you!! Good luck player, hit the start button
+            below to play! </p>
+        <button id="start-btn" type="button" onclick="myFunction()"> Start Game </button>
+        <script>
+            function myFunction() {
+                document.getElementById("intro").style.visibility = "hidden";
+            }
+        </script>
     
-    <h1 id="title"> ⚓ GOLD FISHING GAME ⚓  </h1> 
-    <h3>Press "A" to move left, "D" to move right & "space" to cast your line! Be careful not to hook the sharks or let them eat through your line.</h3>
-    <div class="gamebox">
-        <canvas id="game-canvas" width="1000" height="600"></canvas>
-        <!-- <ul>
-            <li id="level"></li>
-            <li id="gold"></li>
-        </ul> -->
-        <div>
-            <ul class="button-list">
-                <li> <button class="buttons"> Pause </button> </li>
-                <li> <button class="buttons"> Instructions </button> </li>
-                <li> <button class="buttons"> Reset </button> </li>
-            </ul>  
-            
-        </div>
-        
     </div>
     
+    <div class="gamebox">
+        <ul class="stats">
+            <li id="level"></li>
+            <li id="gold"></li>
+        </ul>
+        <canvas id="game-canvas" width="1000" height="600"></canvas>
+        <ul id="social">
+            <li> <a href="https://github.com/tasangpo" target="_blank"> <i id="linkedin" class="fa fa-linkedin-square" style="font-size:72px; color:#006192"></i> </a> </li>
+            <li> <a href="https://www.linkedin.com/in/tashi-s-a868a2185/"><i class="fa fa-github" style="font-size:72px; color:white""></i></a></li>
+        </ul>
+    </div>
+
+    <div id="game-over"> 
+        <h3>YOU GOT ATE</h3>
+        <button id="reset"> New Game </button>
+    </div>
+
+
+
 
 </body>
 </html>

@@ -26,6 +26,7 @@ class Game {
         this.lines = [];
         this.addSharks();
         this.addGolds();
+        this.level = 1;
     }
 
     addSharks() {
@@ -72,7 +73,7 @@ class Game {
     }
 
     draw(ctx) {
-
+        this.updateStats();
         const skyImg = new Image();
         const oceanImg = new Image();
 
@@ -84,12 +85,14 @@ class Game {
 
         this.drawSharks(ctx);
         this.drawGolds(ctx);
-        this.players[0].draw(ctx);
+        if (this.players.length) {
+            this.players[0].draw(ctx);
+        }
+        
 
         if (this.lines.length) {
             this.lines[this.lines.length - 1].move(ctx);
         }
-
         this.goldCollision();
         this.sharkCollision();
     }
@@ -110,17 +113,30 @@ class Game {
         })
     }
 
+    updateStats() {
+        const level = document.getElementById("level");
+        level.innerText = `Level: ${this.level}`
+        const goldCount = document.getElementById("gold");
+        goldCount.innerText = `Gold Remaining: ${this.golds.length}`
+    }
+
     moveSharks(ctx) {
+        const that = this;
         const players = this.players;
         this.sharks.forEach(function (shark) {
             if (shark.pos[1] < 100) {
                 players.shift();
+                // alert("GAME OVER!")
+                debugger
+                let message = document.getElementById("game-over");
+                message.style.visibility = "visible"
             } else {
                 shark.move(ctx);
             }        
         })
         this.draw(ctx);
         if (!this.golds.length) {
+            this.level += 1;
             this.addSharks2();
             this.addGolds();
         }

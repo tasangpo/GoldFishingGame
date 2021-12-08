@@ -3,10 +3,13 @@
 }
 
 #title {
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 1000px;
     height: 75px;
-    margin-left: 50px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
     border: 5px solid rgb(240, 156, 156);
     border-radius: 15px;
@@ -21,34 +24,111 @@
 .gamebox {
     margin-top: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 #game-canvas {
-    margin-left: 50px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 10px;
     position: relative;
     border: 5px solid rgb(240, 156, 156);
     border-radius: 20px;
+    background-image: -webkit-linear-gradient(#39245f 15%, #b92e2e 65%, #3e6f7e 80%);
 }
 
-.button-list {
+#social {
+    position: relative;
+    // border: 1px solid white;
+    list-style: none;
+    display: flex;
+    width: 15%;
+    left: 15%;
+    justify-content: space-between;
+    font-size: 50px;
+}
+ #linkedin {
+    height: 75px;
+    width: inherit;
+ }
+
+
+
+
+#intro{ 
+    left: 30%;
+    top: 20%;
+    position: fixed;
+    padding: 10px;
+    width: 450px;
+    height: 300px;
+    border: 3px solid white;
+    color:rgb(240, 156, 156);
+    border-radius: 15px;
+    z-index: 100;
+    visibility: visible;
+    margin: 10px 0 20px 0;
+    border-top: 1px solid #999;
+    // visibility: hidden;
+}
+
+#intro > p {
+    padding: 10px;
+    font-size: 20px;
     text-align: justify;
 }
 
-.buttons {
-    color: black;
-    background-color: salmon
+#start-btn {
+    width: 100px;
+    height: 25px;
+    position: relative;
+    left: 35%;
+    top: -5%;
+    color: white;
+    background-color: cadetblue;
 }
 
-h3{ 
-    padding: 5px;
-    width: 1000px;
-    height: 50px;
-    margin-left: 100px;
-    color:  white;
+.stats {
+    width: 200px;
+    color: white;
+    background-color: transparent;
+    position: fixed;
+    z-index: 100;
+    list-style: none;
+    left: 10%;
+    justify-content: left;
+    top: 90px;
+}
+
+#level, #gold {
+    width: 125px;
+    background: linear-gradient(to right, hsl(200 100% 62%), hsl(1000 100% 59%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: left;
+}
+
+
+
+#game-over {
+    top: 30%;
+    left: 40%;
+    position: fixed;
+    width: 200px;
+    height: 100px;
     border: 3px solid white;
-    margin: 50px;
-    color:rgb(240, 156, 156);
     border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    visibility: hidden;
+    text-align: center;
+}
+
+#game-over > button {
+    width: 100px;
+    height: 25px;
+    color: white;
+    background-color: cadetblue;
+    top: -10px
 }
