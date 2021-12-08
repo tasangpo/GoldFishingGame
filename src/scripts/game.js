@@ -24,28 +24,19 @@ class Game {
         this.golds = [];
         this.players = [];
         this.lines = [];
+        this.level = 1;
+
         this.addSharks();
         this.addGolds();
-        this.level = 1;
     }
 
     addSharks() {
-        while (this.sharks.length < GAME_DEFAULTS.NUM_SHARKS) {
+        let numSharks = GAME_DEFAULTS.NUM_SHARKS * this.level;
+        while (this.sharks.length < numSharks) {
             let randomPos = this.randomPosition(GAME_DEFAULTS.DIM_X, GAME_DEFAULTS.DIM_Y);
 
             let shark = new Shark({pos: randomPos, game: this, vel: [Math.random() * 5 + 2, 0]});
             if (shark.pos[1] > 125 && shark.pos[1] < 450 && shark.pos[0] > shark.width && shark.pos[0] < GAME_DEFAULTS.DIM_X - shark.width) { // sharks pos should be greater than 100 (aka sea level)
-                this.sharks.push(shark);
-            }
-        }
-    }
-
-    addSharks2() {
-        while (this.sharks.length < GAME_DEFAULTS2.NUM_SHARKS) {
-            let randomPos = this.randomPosition(GAME_DEFAULTS2.DIM_X, GAME_DEFAULTS2.DIM_Y);
-
-            let shark = new Shark({ pos: randomPos, game: this, vel: [Math.random() * 5 + 1, 0] });
-            if (shark.pos[1] > 125 && shark.pos[1] < 450 && shark.pos[0] > shark.width && shark.pos[0] < GAME_DEFAULTS2.DIM_X - shark.width) { // sharks pos should be greater than 100 (aka sea level)
                 this.sharks.push(shark);
             }
         }
@@ -121,13 +112,11 @@ class Game {
     }
 
     moveSharks(ctx) {
-        const that = this;
         const players = this.players;
         this.sharks.forEach(function (shark) {
             if (shark.pos[1] < 100) {
                 players.shift();
                 // alert("GAME OVER!")
-                debugger
                 let message = document.getElementById("game-over");
                 message.style.visibility = "visible"
             } else {
@@ -137,7 +126,7 @@ class Game {
         this.draw(ctx);
         if (!this.golds.length) {
             this.level += 1;
-            this.addSharks2();
+            this.addSharks();
             this.addGolds();
         }
     }
@@ -166,7 +155,6 @@ class Game {
             const lines = this.lines;
             const line = lines[0];
             const lineMid = line.pos[0] + 25;
-            const players = this.players
 
             this.sharks.forEach(function(shark) {
                 if ((line.height > shark.pos[1] - line.pos[1] + 20) && (lineMid > shark.pos[0] && lineMid < shark.pos[0] + shark.width)){

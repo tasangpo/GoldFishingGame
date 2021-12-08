@@ -1,5 +1,5 @@
 *{
-    background-color: black;
+    background-color: BLACK;
 }
 
 #title {
@@ -43,16 +43,10 @@
     list-style: none;
     display: flex;
     width: 15%;
-    left: 15%;
+    left: 40%;
     justify-content: space-between;
     font-size: 50px;
 }
- #linkedin {
-    height: 75px;
-    width: inherit;
- }
-
-
 
 
 #intro{ 
@@ -69,7 +63,6 @@
     visibility: visible;
     margin: 10px 0 20px 0;
     border-top: 1px solid #999;
-    // visibility: hidden;
 }
 
 #intro > p {
@@ -95,9 +88,10 @@
     position: fixed;
     z-index: 100;
     list-style: none;
-    left: 10%;
+    left: 40%;
     justify-content: left;
     top: 90px;
+    font: 30px;
 }
 
 #level, #gold {
@@ -125,10 +119,11 @@
     text-align: center;
 }
 
-#game-over > button {
+#reset-btn {
     width: 100px;
     height: 25px;
     color: white;
     background-color: cadetblue;
     top: -10px
 }
+

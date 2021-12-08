@@ -2,7 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 * {
-  background-color: black;
+  background-color: BLACK;
 }
 
 #title {
@@ -45,14 +45,9 @@
   list-style: none;
   display: flex;
   width: 15%;
-  left: 15%;
+  left: 40%;
   justify-content: space-between;
   font-size: 50px;
-}
-
-#linkedin {
-  height: 75px;
-  width: inherit;
 }
 
 #intro {
@@ -94,9 +89,10 @@
   position: fixed;
   z-index: 100;
   list-style: none;
-  left: 10%;
+  left: 40%;
   justify-content: left;
   top: 90px;
+  font: 30px;
 }
 
 #level, #gold {
@@ -122,7 +118,7 @@
   text-align: center;
 }
 
-#game-over > button {
+#reset-btn {
   width: 100px;
   height: 25px;
   color: white;
