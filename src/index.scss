@@ -43,9 +43,11 @@
     list-style: none;
     display: flex;
     width: 15%;
-    left: 40%;
+    // left: 40%;
     justify-content: space-between;
     font-size: 50px;
+    margin: auto;
+    margin-top: 20px;
 }
 
 
@@ -57,18 +59,21 @@
     width: 450px;
     height: 300px;
     border: 3px solid white;
-    color:rgb(240, 156, 156);
+    color:rgb(221, 131, 131);
     border-radius: 15px;
     z-index: 100;
     visibility: visible;
-    margin: 10px 0 20px 0;
+    // margin: 10px 0 20px 0;
+    margin: auto;
     border-top: 1px solid #999;
+    background-image: linear-gradient(to top, #172020 0%, #330867 100%);
 }
 
 #intro > p {
     padding: 10px;
     font-size: 20px;
     text-align: justify;
+    background: transparent;
 }
 
 #start-btn {
@@ -79,7 +84,12 @@
     top: -5%;
     color: white;
     background-color: cadetblue;
+    border: none;
+    
 }
+
+
+
 
 .stats {
     width: 200px;
@@ -105,15 +115,15 @@
 
 
 #game-over {
-    top: 30%;
+    top: 25%;
     left: 40%;
     position: fixed;
     width: 200px;
-    height: 100px;
+    height: 300px;
     border: 3px solid white;
     border-radius: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    // margin-left: auto;
+    // margin-right: auto;
     color: white;
     visibility: hidden;
     text-align: center;
@@ -126,4 +136,11 @@
     background-color: cadetblue;
     top: -10px
 }
+
+#shark-smile {
+    position: relative;
+    width: 150px;
+    top: 10%;
+}
+
 

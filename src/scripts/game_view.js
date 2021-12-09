@@ -17,21 +17,22 @@ class GameView {
 
     start() {
         this.bindKeyHandlers();
-        const that = this;
-        // const animation = requestAnimationFrame(this.animate.bind(this));
         const moveBind = this.game.moveSharks.bind(this.game, this.ctx);
-        const inv = setInterval(moveBind, 20);
-        document.getElementById("reset-btn").addEventListener("click", function () {
-            // window.cancelAnimationFrame(animation);
-            clearInterval(inv);
-            that.ctx.clearRect(0, 0, 1000, 600);
-            // that.game = new Game();
-            // that.start();
-            const g = new Game();
-            const gv = new GameView(g, that.ctx);
-            gv.start();
-        }
-        )
+        setInterval(moveBind, 20);
+        // const that = this;
+        // const animation = requestAnimationFrame(this.animate.bind(this));
+
+        // document.getElementById("reset-btn").addEventListener("click", function () {
+        //     // window.cancelAnimationFrame(animation);
+        //     clearInterval(inv);
+        //     that.ctx.clearRect(0, 0, 1000, 600);
+        //     // that.game = new Game();
+        //     // that.start();
+        //     const g = new Game();
+        //     const gv = new GameView(g, that.ctx);
+        //     gv.start();
+        // }
+        // )
         
     }
 

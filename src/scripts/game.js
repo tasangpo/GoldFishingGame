@@ -64,7 +64,6 @@ class Game {
     }
 
     draw(ctx) {
-        //
         this.updateStats();
         const skyImg = new Image();
         const oceanImg = new Image();
@@ -80,8 +79,6 @@ class Game {
         if (this.players.length) {
             this.players[0].draw(ctx);
         }
-        
-
         if (this.lines.length) {
             this.lines[this.lines.length - 1].move(ctx);
         }
@@ -120,6 +117,7 @@ class Game {
                 // alert("GAME OVER!")
                 let message = document.getElementById("game-over");
                 message.style.visibility = "visible"
+                window.clearInterval(1)
             } else {
                 shark.move(ctx);
             }        

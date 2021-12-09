@@ -1,7 +1,7 @@
 import Line from "./line.js"
 
 const PLAYER_DEFAULTS = {
-    WIDTH: 100,
+    WIDTH: 200,
     HEIGHT: 75,
     POS: [450, 50],
 }
@@ -18,7 +18,7 @@ class Player {
         // ctx.fillStyle = "#FFD700"
         // ctx.fillRect(this.pos[0], this.pos[1], this.width, this.height);
         const img = new Image();
-        img.src = "src/images/rumham.png"
+        img.src = "src/images/boat.png"
         ctx.drawImage(img, this.pos[0], this.pos[1], this.width, this.height)
     }
 
@@ -40,7 +40,7 @@ class Player {
 
     castLine() {
         this.game.lines.shift();
-        const startingPos = [this.pos[0] + 25, this.pos[1] + 55];
+        const startingPos = [this.pos[0] + 75, this.pos[1] + 55];
         const line = new Line({game: this.game, pos: startingPos})
         this.game.addLine(line);
     } 

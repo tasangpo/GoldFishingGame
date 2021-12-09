@@ -17,9 +17,6 @@ class Shark {
     }
 
     draw(ctx) {
-        // ctx.fillStyle = "#696969"
-        // ctx.fillRect(this.pos[0], this.pos[1], this.width, this.height);
-
         if (this.vel[0] > 0){
             this.img.src = "src/images/shark.png"
         } else if (this.vel[0] < 0){ 
@@ -27,7 +24,6 @@ class Shark {
         } else {
             this.img.src = "src/images/shark_vertical.png"
         }
-        
         ctx.drawImage(this.img, this.pos[0], this.pos[1], this.width, this.height)
     }
 
