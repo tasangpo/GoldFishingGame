@@ -32,7 +32,7 @@ In addition, this project will include:
 
 # Code snippet:
 
-    // for shark collision: If the shark pos is within the range of the line, the velocity of shark will change in to [0, -5] causing it to move up and come up to          the suface.
+    // for shark collision: If the shark pos is within the range of the line, the velocity of shark will change in to [0, -5] causing it to move up and come up to the suface. When shark reaches surface of water in the movesSharks method, it removes the player from the game.
     
     sharkCollision() {
         if (this.lines.length) {
@@ -47,6 +47,26 @@ In addition, this project will include:
                     shark.vel = [0, -5]
                 }
             })
+        }
+    }
+        moveSharks(ctx) {
+        const players = this.players;
+        this.sharks.forEach(function (shark) {
+            if (shark.pos[1] < 100) {
+                players.shift();
+                // alert("GAME OVER!")
+                let message = document.getElementById("game-over");
+                message.style.visibility = "visible"
+                window.clearInterval(1)
+            } else {
+                shark.move(ctx);
+            }        
+        })
+        this.draw(ctx);
+        if (!this.golds.length) {
+            this.level += 1;
+            this.addSharks();
+            this.addGolds();
         }
     }
 
