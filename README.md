@@ -31,7 +31,7 @@ In addition, this project will include:
 - Webpack
 
 # Code Snippet:
-//JS
+JS
     sharkCollision() {
         if (this.lines.length) {
             const lines = this.lines;
