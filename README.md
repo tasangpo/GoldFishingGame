@@ -4,7 +4,7 @@ Javascript Project
 This is a 2D game in which a boat is casting its line to grab gold at the bottom of the ocean. The issue is that the ocean is infested with sharks!! 
 Game will be developed using canvas, with some CSS for additional styling. It will allow user to move the boat horizontally across the water and hit a button to cast the fishing line. The sharks will move in a horziontal pattern and the speed of the fishing line will remain constant going down. The sharks will have their own random speed respectively. Once all of the gold has been retrieved, user will advance to the next level where the number of sharks will increase with each level. 
 
-Please click on the link 
+Please click on the link : [Gold Fishing Game](https://tasangpo.github.io/GoldFishingGame/).
 
 # Functionality and MVPs:
 In "Gold Fishing", users will be able to:
