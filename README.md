@@ -30,7 +30,10 @@ In addition, this project will include:
 - Canvas
 - Webpack
 
-# Code snippet for shark collision: If the shark pos is within the range of the line, the velocity of shark will change in to [0, -5] causing it to move up and come up to the suface.
+# Code snippet:
+
+    // for shark collision: If the shark pos is within the range of the line, the velocity of shark will change in to [0, -5] causing it to move up and come up to          the suface.
+    
     sharkCollision() {
         if (this.lines.length) {
             const lines = this.lines;
