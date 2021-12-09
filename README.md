@@ -31,9 +31,10 @@ In addition, this project will include:
 - Webpack
 
 # Code Snippets:
-
+- Shark collison method checks for contact between the center of line to the shark. When collision happens, the line itself is removed and the shark begins moving up in the 'y' direction. 
+- In the moveShark method, when the shark reaches the surface, the player is removed. Thus, ending the game and rendering the game over message.
 ``` JS
-sharkCollision() {
+    sharkCollision() {
         if (this.lines.length) {
             const lines = this.lines;
             const line = lines[0];
@@ -46,8 +47,32 @@ sharkCollision() {
                     shark.vel = [0, -5]
                 }
             })
+        }  
+    }
+
+    moveSharks(ctx) {
+        const players = this.players;
+        this.sharks.forEach(function (shark) {
+            if (shark.pos[1] < 100) {
+                players.shift();
+                // alert("GAME OVER!")
+                let message = document.getElementById("game-over");
+                message.style.visibility = "visible"
+                window.clearInterval(1)
+            } else {
+                shark.move(ctx);
+            }        
+        })
+        this.draw(ctx);
+        if (!this.golds.length) {
+            this.level += 1;
+            this.addSharks();
+            this.addGolds();
         }
     }
+
+
+
 ```
 
 # Implementation Timeline
