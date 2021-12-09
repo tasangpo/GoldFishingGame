@@ -30,6 +30,23 @@ In addition, this project will include:
 - Canvas
 - Webpack
 
+# Code Snippets:
+//js
+    sharkCollision() {
+        if (this.lines.length) {
+            const lines = this.lines;
+            const line = lines[0];
+            const lineMid = line.pos[0] + 25;
+
+            this.sharks.forEach(function(shark) {
+                if ((line.height > shark.pos[1] - line.pos[1] + 20) && (lineMid > shark.pos[0] && lineMid < shark.pos[0] + shark.width)){
+                    lines.shift();
+                    shark.img.src = "src/images/shark_vertical.png"
+                    shark.vel = [0, -5]
+                }
+            })
+        }
+    }
 # Implementation Timeline
 - Friday Afternoon & Weekend: Work on creating all classes and canvas
 - Monday: Implement logic to check for collisions and track of lives
