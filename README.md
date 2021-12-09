@@ -1,15 +1,17 @@
 # GoldFishing:
 Javascript Project
 
-This is a 2D game in which a fisherman is casting his line to grab gold at the bottom of the ocean. The issue is that the ocean is infested with sharks!! 
-Game will be developed using canvas, with some CSS for additional styling. It will allow user to move the fisherman horizontally across the water and hit a button to cast the fishing line. The sharks will move in a horziontal pattern and the speed of the fishing line will remain constant going down. The sharks will have their own speed respectively. Once all of the gold has been retrieved, user will advance to the next level where the number of sharks or the speed of the sharks will increase. 
+This is a 2D game in which a boat is casting its line to grab gold at the bottom of the ocean. The issue is that the ocean is infested with sharks!! 
+Game will be developed using canvas, with some CSS for additional styling. It will allow user to move the boat horizontally across the water and hit a button to cast the fishing line. The sharks will move in a horziontal pattern and the speed of the fishing line will remain constant going down. The sharks will have their own random speed respectively. Once all of the gold has been retrieved, user will advance to the next level where the number of sharks will increase with each level. 
+
+Please click on the link 
 
 # Functionality and MVPs:
 In "Gold Fishing", users will be able to:
 
 - Move in a 2d space horizontally using the "A" key to move left or "D" key to move right
 - Cast a line by hitting the "space" key.
-- Have three attempts to pass the level
+- Advance to the next level once all gold on the level has been collected.
 
 In addition, this project will include:
 
@@ -17,7 +19,7 @@ In addition, this project will include:
 - javascript logic to detect collision
 - implement logic to determine if player has advanced to the next level or lost
 
-# Wireframe:
+# Screenshot:
 
 ![alt text](https://github.com/tasangpo/GoldFishingGame/blob/main/wireframe%2010.32.54%20AM.png)
 
