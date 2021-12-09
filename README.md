@@ -21,7 +21,7 @@ In addition, this project will include:
 
 # Screenshot:
 
-![alt text](https://github.com/tasangpo/GoldFishingGame/blob/main/wireframe%2010.32.54%20AM.png)
+![alt text](https://github.com/tasangpo/GoldFishingGame/blob/main/game_screenshot.png)
 
 # Technology:
 - HTML
