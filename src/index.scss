@@ -24,7 +24,7 @@
 .gamebox {
     margin-top: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 #game-canvas {
@@ -42,6 +42,7 @@
     // border: 1px solid white;
     list-style: none;
     display: flex;
+    flex-direction: column;
     width: 15%;
     // left: 40%;
     justify-content: space-between;
@@ -52,8 +53,8 @@
 
 
 #intro{ 
-    left: 30%;
-    top: 20%;
+    left: 35%;
+    top: 30%;
     position: fixed;
     padding: 10px;
     width: 450px;
@@ -63,8 +64,6 @@
     border-radius: 15px;
     z-index: 100;
     visibility: visible;
-    // margin: 10px 0 20px 0;
-    margin: auto;
     border-top: 1px solid #999;
     background-image: linear-gradient(to top, #172020 0%, #330867 100%);
 }
@@ -144,11 +143,14 @@
 }
 
 #instructions {
+    display: block;
     color: peachpuff;
-    // border: 1px solid white;
-    width: 500px;
-    margin-left: 100px;
+    border: 1px solid navajowhite;
+    width: 250px;
+    margin-left: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: auto;
+    padding: 10px;
 }
 
 
