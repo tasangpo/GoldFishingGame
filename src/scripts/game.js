@@ -9,15 +9,6 @@ const GAME_DEFAULTS = {
     NUM_GOLD: 5
 }
 
-const GAME_DEFAULTS2 = {
-    DIM_X: 1000,
-    DIM_Y: 600,
-    NUM_SHARKS: GAME_DEFAULTS.NUM_SHARKS * 2,
-    NUM_GOLD: 5
-}
-
-
-
 class Game {
     constructor() {
         this.sharks = [];
@@ -31,11 +22,11 @@ class Game {
     }
 
     addSharks() {
-        let numSharks = GAME_DEFAULTS.NUM_SHARKS * this.level;
+        let numSharks = GAME_DEFAULTS.NUM_SHARKS * (this.level/2);
         while (this.sharks.length < numSharks) {
             let randomPos = this.randomPosition(GAME_DEFAULTS.DIM_X, GAME_DEFAULTS.DIM_Y);
 
-            let shark = new Shark({pos: randomPos, game: this, vel: [Math.random() * 5 + 2, 0]});
+            let shark = new Shark({pos: randomPos, game: this, vel: [Math.random() + this.level * 2, 0]});
             if (shark.pos[1] > 125 && shark.pos[1] < 450 && shark.pos[0] > shark.width && shark.pos[0] < GAME_DEFAULTS.DIM_X - shark.width) { // sharks pos should be greater than 100 (aka sea level)
                 this.sharks.push(shark);
             }
@@ -114,7 +105,6 @@ class Game {
         this.sharks.forEach(function (shark) {
             if (shark.pos[1] < 100) {
                 players.shift();
-                // alert("GAME OVER!")
                 let message = document.getElementById("game-over");
                 message.style.visibility = "visible"
                 window.clearInterval(1)
@@ -124,6 +114,7 @@ class Game {
         })
         this.draw(ctx);
         if (!this.golds.length) {
+            alert("WOOO! NEXT LEVEL")
             this.level += 1;
             this.addSharks();
             this.addGolds();

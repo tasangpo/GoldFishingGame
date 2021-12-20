@@ -13,7 +13,6 @@
 <body>
     <h1 id="title"> ⚓ GOLD FISHING GAME ⚓ </h1>
 
-
     <div id="intro">
         <p> Welcome to the Gold Fishing Game! Instructions are very simple, use you "A" key to move your player left and "D"
             key to move your player right. When you think the time is right, enter your "space" key to drop your
@@ -30,15 +29,35 @@
     </div>
     
     <div class="gamebox">
-        <div id="instructions">
-            <h3>Instructions: </h3>
-            <p>Press "a" to move left, "d" to move right" and "space" do drop line</p>
-            <p>Hint: Patience is key </p>
+
+        <div class="left-nav">
+
+            <ul class="stats">
+                <h2><li id="level"></li></h2>
+                <h2><li id="gold"></li></h2>
+            </ul>
+
+            <div id="instructions">
+                <h2>Instructions: </h2>
+                <ul>
+                    <li>
+                        <h3>Hit "A" to move left </h3>
+                    </li>
+                    <li>
+                        <h3>Hit "D" to move right </h3>
+                    </li>
+                    <li>
+                        <h3>Hit "Space" to cast your line </h3>
+                    </li>
+                </ul>
+
+                <h3>Hint: Patience is key </h3>
+            </div>
+
         </div>
-        <ul class="stats">
-            <li id="level"></li>
-            <li id="gold"></li>
-        </ul>
+
+
+
 
         <canvas id="game-canvas" width="1000" height="600"></canvas>
 

@@ -31,10 +31,10 @@ class Player {
     // } 
     power(impulse) {
         this.pos[0] += impulse[0] * 15;
-        if (this.pos[0] < 0) {
-            this.pos[0] = 0;
-        } else if (this.pos[0] > 900) {
-            this.pos[0] = 900;
+        if (this.pos[0] < -75) {
+            this.pos[0] = -75;
+        } else if (this.pos[0] > 875) {
+            this.pos[0] = 875;
         } 
     }
 

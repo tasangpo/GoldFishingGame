@@ -1,20 +1,15 @@
 *{
-    background-color: BLACK;
+    background-color: black;
 }
 
 #title {
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 1000px;
-    height: 75px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
-    border: 5px solid rgb(240, 156, 156);
+    margin-top: 0px;
+    margin-bottom: 0px;
     border-radius: 15px;
     text-align: center;
-    font-size: 65px;
+    font-size: 35px;
     font-family: 'Titillium Web', sans-serif;
     -webkit-text-fill-color: transparent;
     background-image: -webkit-linear-gradient(#f1b6d3 15%, #ffffff 65%, #02b2e7 80%);
@@ -22,33 +17,26 @@
 }
 
 .gamebox {
-    margin-top: 10px;
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 #game-canvas {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
     position: relative;
-    border: 5px solid rgb(240, 156, 156);
+    border: 3px solid rgb(240, 156, 156);
     border-radius: 20px;
     background-image: -webkit-linear-gradient(#39245f 15%, #b92e2e 65%, #3e6f7e 80%);
 }
 
 #social {
     position: relative;
-    // border: 1px solid white;
-    list-style: none;
     display: flex;
     flex-direction: column;
     width: 15%;
-    // left: 40%;
-    justify-content: space-between;
-    font-size: 50px;
-    margin: auto;
-    margin-top: 20px;
+    list-style: none;
 }
 
 
@@ -87,31 +75,16 @@
     
 }
 
-
-
-
 .stats {
-    width: 200px;
-    color: white;
-    background-color: transparent;
-    position: fixed;
-    z-index: 100;
+    color: magenta;
     list-style: none;
-    left: 40%;
-    justify-content: left;
-    top: 90px;
-    font: 30px;
+    font-family:Tahoma, sans-serif;
+    font-size: 15px;
 }
 
 #level, #gold {
     width: 125px;
-    background: linear-gradient(to right, hsl(200 100% 62%), hsl(1000 100% 59%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: left;
 }
-
-
 
 #game-over {
     top: 25%;
@@ -121,8 +94,6 @@
     height: 300px;
     border: 3px solid white;
     border-radius: 15px;
-    // margin-left: auto;
-    // margin-right: auto;
     color: white;
     visibility: hidden;
     text-align: center;
@@ -145,10 +116,9 @@
 #instructions {
     display: block;
     color: peachpuff;
-    border: 1px solid navajowhite;
-    width: 250px;
+    width: 175px;
     margin-left: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Tahoma, sans-serif;
     margin: auto;
     padding: 10px;
 }
